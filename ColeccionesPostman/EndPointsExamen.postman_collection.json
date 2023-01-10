@@ -1,0 +1,640 @@
+{
+	"info": {
+		"_postman_id": "406c0607-7ccf-4359-9050-ff9a8fb6e4c1",
+		"name": "EndPointsExamen",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "mso-usuarios",
+			"item": [
+				{
+					"name": "consulta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8180/examencurso/usuarios/v1/consulta",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8180",
+							"path": [
+								"examencurso",
+								"usuarios",
+								"v1",
+								"consulta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultaUsuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8180/examencurso/usuarios/v1/consultaUsuario/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8180",
+							"path": [
+								"examencurso",
+								"usuarios",
+								"v1",
+								"consultaUsuario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"nombreUsuario\": \"JCMG\",\n        \"contrasenia\": \"123\",\n        \"correo\": \"jcmg@gmail.com\",\n        \"direccion\": \"No. 4410 Tlalpan, Ciudad de Mexico\",\n        \"estado\": \"CDMX\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8180/examencurso/usuarios/v1/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8180",
+							"path": [
+								"examencurso",
+								"usuarios",
+								"v1",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualiza",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"idUsuario\": 1,\n        \"nombreUsuario\": \"Julio C Guzman\",\n        \"contrasenia\": \"123\",\n        \"correo\": \"topazsparrow@gmail.com\",\n        \"direccion\": \"Nueva direccion s/n CDMX\",\n        \"estado\": \"CDMX\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8180/examencurso/usuarios/v1/actualiza",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8180",
+							"path": [
+								"examencurso",
+								"usuarios",
+								"v1",
+								"actualiza"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "elimina",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"idUsuario\": 1,\n        \"nombreUsuario\": \"Julio C Guzman\",\n        \"contrasenia\": \"123\",\n        \"correo\": \"topazsparrow@gmail.com\",\n        \"direccion\": \"Nueva direccion s/n CDMX\",\n        \"estado\": \"CDMX\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8180/examencurso/usuarios/v1/elimina",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8180",
+							"path": [
+								"examencurso",
+								"usuarios",
+								"v1",
+								"elimina"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "agregaContacto",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"idUsuario\": 1,\n        \"nombreUsuario\": \"Julio C Guzman\",\n        \"contrasenia\": \"123\",\n        \"correo\": \"topazsparrow@gmail.com\",\n        \"direccion\": \"Nueva direccion s/n CDMX\",\n        \"estado\": \"CDMX\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8180/examencurso/usuarios/v1/agregarContacto/2/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8180",
+							"path": [
+								"examencurso",
+								"usuarios",
+								"v1",
+								"agregarContacto",
+								"2",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "mso-contactos",
+			"item": [
+				{
+					"name": "consulta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8380/examencurso/contactos/v1/consulta/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8380",
+							"path": [
+								"examencurso",
+								"contactos",
+								"v1",
+								"consulta",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultaContactos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8380/examencurso/contactos/v1/consultaContactos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8380",
+							"path": [
+								"examencurso",
+								"contactos",
+								"v1",
+								"consultaContactos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"idUsuarioOrigen\": 1,\n    \"idUsuarioContacto\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8380/examencurso/contactos/v1/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8380",
+							"path": [
+								"examencurso",
+								"contactos",
+								"v1",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":2,\n    \"idUsuarioOrigen\":1,\n    \"idUsuarioContacto\":1\n}\n ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8380/examencurso/contactos/v1/actualizar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8380",
+							"path": [
+								"examencurso",
+								"contactos",
+								"v1",
+								"actualizar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "elimina",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"id\": 5,\n        \"idUsuarioOrigen\": 1,\n        \"idUsuarioContacto\": 2\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8380/examencurso/contactos/v1/elimina",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8380",
+							"path": [
+								"examencurso",
+								"contactos",
+								"v1",
+								"elimina"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "mso-mensajes",
+			"item": [
+				{
+					"name": "crearConversacion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\n{\n    \"idUsuarioOrigen\":1,\n    \"idUsuarioDestino\":2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8280/examencurso/mensajes/v1/crearConversacion",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8280",
+							"path": [
+								"examencurso",
+								"mensajes",
+								"v1",
+								"crearConversacion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultaConversacion",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8280/examencurso/mensajes/v1/consultaConversaciones",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8280",
+							"path": [
+								"examencurso",
+								"mensajes",
+								"v1",
+								"consultaConversaciones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminaConversacion",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n            \"idConversacion\": 1,\n            \"idUsuarioOrigen\": 1,\n            \"idUsuarioDestino\": 2\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8280/examencurso/mensajes/v1/eliminaConversacion",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8280",
+							"path": [
+								"examencurso",
+								"mensajes",
+								"v1",
+								"eliminaConversacion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crearMensaje",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"idConversacion\":1,\n    \"fechaHora\":\"25/12/2022\",\n    \"texto\":\"Hola mundo\",\n    \"visto\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8280/examencurso/mensajes/v1/crearMensaje",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8280",
+							"path": [
+								"examencurso",
+								"mensajes",
+								"v1",
+								"crearMensaje"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultaMensajes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"idConversacion\":1,\n    \"fechaHora\":\"25/12/2022\",\n    \"texto\":\"Hola mundo\",\n    \"visto\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8280/examencurso/mensajes/v1/consultaMensajes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8280",
+							"path": [
+								"examencurso",
+								"mensajes",
+								"v1",
+								"consultaMensajes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultaMensajesConversacion",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"idConversacion\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8280/examencurso/mensajes/v1/consultaMensajesConversacion",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8280",
+							"path": [
+								"examencurso",
+								"mensajes",
+								"v1",
+								"consultaMensajesConversacion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizaMensaje",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"idMensaje\": 4,\n        \"idConversacion\": 1,\n        \"fechaHora\": \"09/01/2023\",\n        \"texto\": \"Hola mundo de nuevo\",\n        \"visto\": true\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8280/examencurso/mensajes/v1/actualizaMensaje",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8280",
+							"path": [
+								"examencurso",
+								"mensajes",
+								"v1",
+								"actualizaMensaje"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminaMensaje",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"idMensaje\": 4,\n        \"idConversacion\": 1,\n        \"fechaHora\": \"09/01/2023\",\n        \"texto\": \"Hola mundo de nuevo\",\n        \"visto\": true\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8280/examencurso/mensajes/v1/eliminaMensaje",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8280",
+							"path": [
+								"examencurso",
+								"mensajes",
+								"v1",
+								"eliminaMensaje"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultaConversacionUsuario",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"idConversacion\": 1,\n            \"idUsuarioOrigen\": 1,\n            \"idUsuarioDestino\": 2\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8280/examencurso/mensajes/v1/consultaConversacionUsuario/1/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8280",
+							"path": [
+								"examencurso",
+								"mensajes",
+								"v1",
+								"consultaConversacionUsuario",
+								"1",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminaConversacionUsuario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8280/examencurso/mensajes/v1/eliminaConversacionUsuario/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8280",
+							"path": [
+								"examencurso",
+								"mensajes",
+								"v1",
+								"eliminaConversacionUsuario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

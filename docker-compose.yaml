@@ -1,0 +1,59 @@
+ version: '3.3'
+ services:
+  bdpostgress:
+    build: postgresdb/
+    environment:
+      - POSTGRES_PASSWORD=secret
+    ports:
+      - 5432:5432
+    volumes:
+      - ./blockstorage/postgres:/var/lib/postgresql/data
+  rabbitmq:
+    image: rabbitmq:3.6.12-management-alpine
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+  discovery-server:
+     build: mso-discovery-service/
+     ports:
+       - "8761:8761"
+  monitor-server:
+    build: mso-monitor-server/
+    ports:
+      - "8090:8090"
+  usuarios:
+    build: mso-usuarios/
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://bdpostgress:5432/examen
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery-server:8761/eureka/
+      - SPRING_RABBITMQ_HOST=rabbitmq
+      - SPRING_BOOT_ADMIN_CLIENT_URL=http://monitor-server:8090
+    ports:
+      - "8180:8180"
+    depends_on:
+      - bdpostgress
+      - rabbitmq
+  contactos:
+    build: mso-contactos/
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://bdpostgress:5432/examen
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery-server:8761/eureka/
+      - SPRING_RABBITMQ_HOST=rabbitmq
+      - SPRING_BOOT_ADMIN_CLIENT_URL=http://monitor-server:8090
+    ports:
+      - "8380:8380"
+    depends_on:
+      - bdpostgress
+      - rabbitmq
+  mensajes:
+    build: mso-mensajes/
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://bdpostgress:5432/examen
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery-server:8761/eureka/
+      - SPRING_RABBITMQ_HOST=rabbitmq
+      - SPRING_BOOT_ADMIN_CLIENT_URL=http://monitor-server:8090
+    ports:
+      - "8280:8280"
+    depends_on:
+      - bdpostgress
+      - rabbitmq

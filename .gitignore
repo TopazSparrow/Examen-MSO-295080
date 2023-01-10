@@ -1,0 +1,9 @@
+mso-contactos/bin/
+mso-discovery-service/bin/
+mso-contactos/.mvn/
+mso-discovery-service/.mvn/wrapper/maven-wrapper.jar
+mso-usuarios/.mvn/
+mso-monitor-server/.mvn/
+mso-mensajes/.mvn/wrapper/maven-wrapper.properties
+mso-discovery-service/.mvn/
+mso-mensajes/.mvn/
